@@ -1,8 +1,9 @@
 from discord.ext import commands
 from discord import Intents
+import discord
 import os
-from src.commands import add_commands
-from src.events import add_events
+from commands import add_commands
+from events import add_events
 
 
 def run():
@@ -13,4 +14,6 @@ def run():
 
 
 if __name__ == '__main__':
+    if not discord.opus.is_loaded():
+        discord.opus.load_opus(os.getenv("LIBOPUS_PATH"))
     run()

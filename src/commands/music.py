@@ -1,4 +1,4 @@
-from src.music_sources.youtube import YTDLSource
+from music_sources.youtube import YTDLSource
 
 
 def add_commands(bot):
